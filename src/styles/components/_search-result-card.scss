@@ -1,0 +1,35 @@
+.search-result-card {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  background: linear-gradient(
+    to right bottom,
+    color.scale($color-primary, $lightness: 50%, $alpha: -70%),
+    color.scale($color-secondary, $lightness: 80%, $alpha: -30%)
+  );
+  box-shadow: 0.5rem 0.5rem 0.5rem
+    color.scale($color-secondary, $lightness: 50%);
+  padding: 1.75rem;
+  border-radius: 0.75rem;
+  backdrop-filter: blur(0.15rem);
+  cursor: pointer;
+
+  .icon {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin-right: 2rem;
+  }
+
+  .overview {
+    flex: 4;
+
+    .username {
+      font-size: 1.5rem;
+    }
+
+    .type {
+      font-size: 1rem;
+    }
+  }
+}

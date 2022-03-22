@@ -1,0 +1,21 @@
+form.search-bar {
+  display: flex;
+
+  @include space-items(horizontally, 2rem);
+
+  input {
+    &.search-field {
+      padding: 1rem;
+      border-radius: 4px 0px 0px 4px;
+      padding: 1rem;
+      color: $color-secondary;
+      flex: 1;
+      border: 1px solid $color-primary;
+    }
+
+    &.search-button {
+      border-radius: 0 4px 4px 0;
+      margin-left: 0;
+    }
+  }
+}

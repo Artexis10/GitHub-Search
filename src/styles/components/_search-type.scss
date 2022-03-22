@@ -1,0 +1,13 @@
+.types-wrapper {
+  display: flex;
+  align-items: center;
+  @include space-items(horizontally, 1.5rem);
+
+  .type-wrapper {
+    display: flex;
+    align-items: center;
+    user-select: none;
+
+    @include space-items(horizontally, 0.3rem);
+  }
+}

@@ -1,0 +1,4 @@
+.content {
+  margin-top: 2rem;
+  @include space-items(vertically, 1.25rem);
+}

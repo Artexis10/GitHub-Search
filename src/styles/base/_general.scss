@@ -1,0 +1,87 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+  font-family: $font;
+  color: $color-secondary;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $linear-gradient,
+    url(../../../public/images/coding-background.jpg) no-repeat fixed center;
+  background-size: cover;
+  padding: 0 50px;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  max-width: 1080px;
+}
+
+[id="app"] {
+  margin: 2rem 0;
+  @include space-items(vertically, 3rem);
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: color.adjust($color-secondary, $lightness: 10%);
+  letter-spacing: 0.05em;
+  text-decoration: overline;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+input, button {
+  &:focus,
+  &:focus-visible,
+  &:active {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+button,
+input[type="submit"] {
+  &:hover,
+  &:focus,
+  &:focus-visible,
+  &.active {
+    background-color: $color-secondary;
+    color: $color-primary;
+    box-shadow: 0 0 2em color.scale($color-secondary, $lightness: 35%);
+  }
+
+  color: $color-secondary;
+  padding: 1rem;
+  background: $color-primary;
+  transition: 250ms ease;
+  cursor: pointer;
+}
+
+input[type]:not(input[type="radio"]) {
+  transition: 250ms ease;
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 2em color.scale($color-secondary, $lightness: 35%);
+  }
+}
+
+input[type="radio"] {
+  &:focus-visible {
+    outline: 2px solid $color-secondary;
+  }
+}

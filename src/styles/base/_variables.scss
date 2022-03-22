@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+$font: 'Roboto', sans-serif;
+
+$color-primary: hsl(204, 8%, 95%);
+$color-secondary: hsl(0, 0%, 11%);
+
+$linear-gradient: linear-gradient(
+  180deg,
+  color.scale($color-primary, $alpha: -7%) 0%,
+  color.scale($color-secondary, $lightness: 65%) 110%
+);

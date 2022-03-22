@@ -1,0 +1,19 @@
+@mixin line-clamper($lines) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+@mixin space-items($dir, $amount) {
+  @if $dir == horizontally {
+    > * + * {
+      margin-left: $amount;
+    }
+  } @else if $dir == vertically {
+    > * + * {
+      margin-top: $amount;
+    }
+  }
+}

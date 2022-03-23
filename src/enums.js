@@ -1,6 +1,11 @@
-export const SearchTypes = {
+export const SearchTypeLabels = {
+  USERS: "Users",
+  ORGANIZATIONS: "Organizations",
+};
+
+export const SearchTypeValues = {
   USERS: "user",
   ORGANIZATIONS: "org",
 };
 
-Object.freeze(SearchTypes);
+Object.freeze(SearchTypeLabels, SearchTypeValues);
